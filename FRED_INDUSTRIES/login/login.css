@@ -1,0 +1,139 @@
+/* F.R.E.D. Industries — Login Terminal */
+/* Phase 3.1: Bootup Animation + UI Polish */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #9ef5b5;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== Boot Screen ===== */
+.boot-screen {
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    color: #7fffd4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.9rem;
+    white-space: pre-line;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.boot-text::after {
+    content: "_";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* ===== Login Screen ===== */
+.login-container {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    background: rgba(0, 20, 0, 0.6);
+    box-shadow: 0 0 20px #00ff99;
+    width: 320px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.login-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #7fffd4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+input {
+    background: #000;
+    border: 2px solid #00ff99;
+    color: #9ef5b5;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 150px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #00ff99;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #00ff99;
+    background: transparent;
+    color: #9ef5b5;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    background: #00ff99;
+    color: #000;
+}
+
+#message {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.error {
+    color: #ff4d4d;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

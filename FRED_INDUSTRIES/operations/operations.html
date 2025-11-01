@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.R.E.D. Operations - Outposts</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="operations.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">← Terminal</button>
+
+    <div class="ops-container">
+        <h1>F.R.E.D. Operations - Public Outposts</h1>
+        <div class="outposts-grid">
+            <!-- 15 Template Cards -->
+            <div class="outpost-card">
+                <p><strong>Name: <i>Selene</i></strong> </p>
+                <p><strong>Desc: </strong>Selene is a small colonization project, experimenting on human effects in low-g.</p>
+                <p><strong>Type: Colony</strong> </p>
+                <p><strong>Designation: Moon-31</strong> </p>
+            </div>
+            <div class="outpost-card">
+                <p><strong>Name: <i>Aegis</i></strong> </p>
+                <p><strong>Desc: </strong>Aegis serves as a military outpost, providing defense and strategic oversight in the sector.</p>
+                <p><strong>Type: Defense</strong> </p>
+                <p><strong>Designation: Jupiter-12</strong> </p>
+            </div>
+            <div class="outpost-card">
+                <p><strong>Name: <i>Marina</i></strong> </p>
+                <p><strong>Desc: </strong>Marina is an outpost designed to study the effects of liquid methan and ethane oceans on marine biology.</p>
+                <p><strong>Type: Research Outpost</strong> </p>
+                <p><strong>Designation: Titan-24</strong> </p>
+            </div>
+    </div>
+
+    <script src="../global/global.js"></script>
+    <script src="operations.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = "../main/main.html";
+        }
+    </script>
+</body>
+</html>
