@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F.R.E.D. Industries — Main Terminal</title>
+  <link rel="stylesheet" href="../global/global.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="terminal-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">F.R.E.D.</div>
+      <nav class="nav">
+        <button class="nav-btn" data-target="../directory/directory.html">DIRECTORY</button>
+        <button class="nav-btn" data-target="../initiatives/initiatives.html">INITIATIVES</button>
+        <button class="nav-btn" data-target="../operations/operations.html">OPERATIONS</button>
+        <button class="nav-btn" data-target="../clearance_appeal/ca.html">CLEARANCE APPEAL</button>
+      </nav>
+    </aside>
+
+    <!-- Main Display -->
+    <main class="main-display">
+      <div class="welcome">
+        <h1 id="welcomeText"></h1>
+        <p id="systemInfo"></p>
+      </div>
+      <div class="content-frame" id="contentFrame">
+        <p>Awaiting input...</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../global/global.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
